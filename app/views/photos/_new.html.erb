@@ -1,0 +1,10 @@
+<%= form_for([@album, @album.photos.build]) do |f| %>
+ 
+Photo<br />
+
+<%= f.file_field :image %>
+<br />
+    <%= f.submit %>
+
+<br />
+<% end %>

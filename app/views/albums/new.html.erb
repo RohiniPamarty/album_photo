@@ -1,0 +1,10 @@
+<h2>Create a new album:</h2>
+<%= form_for([@user, @user.albums.build]) do |f| %>
+<br />
+    <%= f.label :name %>
+<br />
+    <%= f.text_field :name %>
+<br />
+    <%= f.submit %>
+
+<% end %>

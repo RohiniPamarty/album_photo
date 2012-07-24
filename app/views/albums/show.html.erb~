@@ -1,0 +1,11 @@
+
+<br />
+Name:
+<br />
+<%= @album.name %>
+<br/>
+<hr />
+<br />
+list of photos
+
+<%= render @album.photos %>

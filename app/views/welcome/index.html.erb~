@@ -1,0 +1,5 @@
+
+
+<%= link_to "List of users", users_path %>
+<%= link_to "New album", users_path %>
+<%= link_to "List of albums", albums_path %>

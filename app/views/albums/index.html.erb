@@ -1,0 +1,6 @@
+<hr>
+<% @albums.each do |u| %>
+<br />
+<%= link_to "Album "+u.name,  user_album_path(:user_id =>current_user.id, :id => u.id) %>
+<% end %>
+
