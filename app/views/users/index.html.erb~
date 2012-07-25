@@ -1,6 +1,6 @@
 <hr>
 <% @users.each do |u| %>
 <br />
-<%= link_to u.email, tags_path(:id => u.id) %>
+<%= u.email %>
 <% end %>
 

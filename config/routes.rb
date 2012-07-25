@@ -1,8 +1,14 @@
 ActiveTest::Application.routes.draw do
   devise_for :users
   resources :users
-  resources :albums
-  resources :photos
+resources :tags
+  resources :albums do
+   resources :tags
+  end
+  resources :photos do
+   resources :tags
+   
+  end
   resources :users do
   resources :albums
 end

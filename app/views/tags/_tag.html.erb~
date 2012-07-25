@@ -1,0 +1,19 @@
+<br />
+<br />
+<p>
+  <b>Tags:</b>
+  <%= tag.tags.map { |t| t.name }.join(", ") %>
+</p>
+
+
+<%= form_for([tag, Tag.new()]) do |f| %>
+<br />
+Add tag
+<br />
+  <%= f.text_field :name %>
+  <%= f.hidden_field :taggable_id, :value => tag.id %>
+<%= f.hidden_field :taggable_type, :value => tag.classname %>
+
+<br />
+  <%= f.submit %>
+<% end %>

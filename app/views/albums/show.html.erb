@@ -12,3 +12,5 @@ list of photos
 
 <h2>Add a photo:</h2>
 <%= render "photos/new" %>
+<br />
+  <%= render :partial => 'tags/tag', :locals => { :tag => @album }  %>

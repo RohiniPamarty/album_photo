@@ -1,0 +1,19 @@
+<hr>
+The avaliable taggings for the user are
+<hr />
+<% @tags.each do |u| %>
+<br />
+<% if u.taggable_type == "Photo" %>
+Image
+<br />
+<%= image_tag(Photo.find(u.taggable.id).image.url)  %>
+<br />
+<% end %>
+<% if u.taggable_type == "Album" %>
+Album name:
+<br />
+<%= Album.find(u.taggable_id).name %>
+<br />
+<% end %>
+
+<% end %>
