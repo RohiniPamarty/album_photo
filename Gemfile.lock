@@ -68,6 +68,7 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (>= 0.0.2)
       mime-types
+    pg (0.10.0)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -126,6 +127,7 @@ DEPENDENCIES
   execjs
   jquery-rails
   paperclip (~> 3.0)
+  pg (= 0.10.0)
   rails (= 3.2.0)
   sass-rails (~> 3.2.3)
   therubyracer
