@@ -6,7 +6,7 @@ gem 'rails', '3.2.0'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 #gem 'sqlite3'
-gem 'devise'
+gem 'devise', "~> 2.1.0"
 gem "paperclip", "~> 3.0"
 group :production do
   # gems specifically for Heroku go here

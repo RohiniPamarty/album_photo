@@ -123,7 +123,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
-  devise
+  devise (~> 2.1.0)
   execjs
   jquery-rails
   paperclip (~> 3.0)
