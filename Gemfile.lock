@@ -127,7 +127,7 @@ DEPENDENCIES
   execjs
   jquery-rails
   paperclip (~> 3.0)
-  pg (= 0.10.0)
+  pg
   rails (= 3.2.0)
   sass-rails (~> 3.2.3)
   therubyracer
