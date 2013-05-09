@@ -1,0 +1,24 @@
+{
+ "type" : "interpreter_config",
+ "configurations" : [
+  {
+    "settings" : [
+     {
+       "driverOptions" : {
+         "host" : "ondemand.saucelabs.com",
+         "post" : 80
+        },
+        "broswerOptions" : {
+          "browserName" : "firefox",
+          "username" : "${SAUCE_USERNAME}",
+          "accessKey" : "${SAUCE_ACCESS_KEY}"
+         }
+       }
+     ],
+     "scripts" : [
+       "selenium/test/*"
+      ]
+    }
+  ]
+}
+
