@@ -10,8 +10,9 @@ gem 'devise', "~> 2.1.0"
 gem "paperclip", "~> 3.0"
 group :production do
   # gems specifically for Heroku go here
-  gem "pg"
+  #gem "pg"
 end
+gem 'sqlite3'
 
 
 
