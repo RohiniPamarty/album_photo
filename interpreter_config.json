@@ -1,12 +1,12 @@
-{ "configurations" : [ { "scripts" : [ "selenium/tests/*" ],
-        "settings" : [ { "broswerOptions" : { "accessKey" : "${SAUCE_ACCESS_KEY}",
-                  "browserName" : "firefox",
-                  "username" : "${SAUCE_USERNAME}"
+{ "configurations": [ { "scripts": [ "selenium/tests/*" ],
+        "settings": [ { "broswerOptions": { "accessKey" : "${SAUCE_ACCESS_KEY}",
+                  "browserName": "firefox",
+                  "username": "${SAUCE_USERNAME}"
                 },
-              "driverOptions" : { "host" : "ondemand.saucelabs.com",
-                  "post" : 80
+              "driverOptions": { "host": "ondemand.saucelabs.com",
+                  "post": 80
                 }
             } ]
       } ],
-  "type" : "interpreter_config"
+  "type": "interpreter_config"
 }
