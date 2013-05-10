@@ -1,4 +1,4 @@
-{ "configurations": [ { "scripts": [ "selenium/tests/*" ],
+{ "configurations": [ { "scripts": [ "selenium/tests/git_test.json" ],
         "settings": [ { "broswerOptions": { "accessKey" : "${SAUCE_ACCESS_KEY}",
                   "browserName": "firefox",
                   "username": "${SAUCE_USERNAME}"
