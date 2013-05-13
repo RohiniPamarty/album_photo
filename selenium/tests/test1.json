@@ -1,0 +1,44 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 1,
+  "steps": [
+    {
+      "type": "get",
+      "url": "http://ec2-184-73-243-249.compute-1.amazonaws.com/users/sign_in"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "user_login"
+      },
+      "text": "mandar"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "user_password"
+      },
+      "text": "password"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "name",
+        "value": "commit"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "Followers"
+      }
+    },
+    {
+      "type": "goBack"
+    }
+  ]
+}
