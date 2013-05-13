@@ -8,8 +8,8 @@ script:
   - "se-interpreter interpreter_config.json"
 env:
   global:
-    - secure: "SLoCuXPwhSO2waXOPKOUCHG9gEaXqqvUWV47JVUYb/KsicGEHiDvIq0esgta\nbAnQNn5iIjMo9OlvgDhvr9ravkTXZpF1Df8A7RBT/uSgksiXDNUgbEQ41bwf\nqFCVK4xdXNHXxiYAuKO1Dlb8uSiGBByaLEHKHOyaxTc0UojCFcI="
-    - secure: "Cr3HAYlfPxue4ROsbjOJaWWeyv/UlTUFhPUFB+IoiWXMtBZA85W8+eeykwH1\nCrPtLiq/57y+p3oZvsbWDEGQsK+YNT3YMYxjh6woXRUwA7mJc/s45apMwNV4\nwx6N2BEaHmDCOwcfwceYDr1vWF6h/MK2uA+XJH2JarDZWEugj00="
+    - secure: "AlheOk2XydaTcCLfDVzhoSmLdSLK2bRAUq9sQSZZyJU/FT8Tpf/FLgxMSBeU\n0EHUQPIt6rta/oXLr7Rt2HErzXnmSsV8oIVxm0lxexQMn2l3K2PAQXo0oKXR\nES1r5xNUqN2E6zS5teHoN3ibOSCmVyYGEhZr9i/tPeRkjWeTy+4="
+    - secure: "g/2EvlTwuhFhYpDYKuP4YcSo2bIdF4FTrUEdxgpwEIFbQzCvCmPtgamLBdKA\nDLnMWaUJc8879pUMC7xsBc5maSeLd0oe3uNuIMYlyeGbJwyP9P8fBz5CwA/g\nyG4VF2rMhuQXkPuyQpPXa1SdguIGqNH9bOMm/sNJLiHIv2fMy6w="
 before_script:
   - "npm install -g se-interpreter"
   - rake db:migrate
