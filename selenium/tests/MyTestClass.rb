@@ -13,10 +13,11 @@ class SeleniumTestBase < Test::Unit::TestCase
     #Some code which will query a DB for you
   end
   def start_browser(browserType)
+    caps = Selenium::WebDriver::Remote::Capabilities.browserType
     username = ENV['SAUCE_USERNAME']
     key = ENV['SAUCE_ACCESS_KEY']
     hub_url = "http://#{username}:#{key}@ondemand.saucelabs.com:80" 
-    return @myDriver = @myDriver.for(:remote, :url => hub_url)
+    return @myDriver = @myDriver.for(:remote, :url => hub_url, :desired_capabilities => caps)
     #Some code which will launch different types of browsers
   end
   def switch_to_window(handle)
