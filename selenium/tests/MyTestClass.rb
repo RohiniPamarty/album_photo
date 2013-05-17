@@ -15,7 +15,7 @@ class SeleniumTestBase < Test::Unit::TestCase
   def start_browser(browserType)
     username = ENV['SAUCE_USERNAME']
     key = ENV['SAUCE_ACCESS_KEY']
-    hub_url = "%s:%s@ondemand.saucelabs.com:80" % [username, key]
+    hub_url = "http://#{username}:#{key}@ondemand.saucelabs.com:80" 
     return @myDriver = @myDriver.for(:remote, :url => hub_url)
     #Some code which will launch different types of browsers
   end
