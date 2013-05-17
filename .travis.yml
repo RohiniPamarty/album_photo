@@ -3,9 +3,9 @@ rvm:
   - "1.9.2"
   - "1.9.3"
 # uncomment this line if your project needs to run something other than `rake`:
-# script: bundle exec rspec spec
-script:
-  - "se-interpreter interpreter_config.json"
+ script: 
+  - Dir["selenium/tests/*.rb"].each {|file| ruby file.rb }
+
 env:
   global:
     - secure: "SQ3jhq1SWUZuCmPhEY3gLTB806YyHQq2euDhgcASozgeZNVzR7tPiLl6gJA9\nKus47YpvhpaSWhk0Fp+f9DqeYCTMs865YvXSyP0gsw47ph5lhI5oyV/R5lbi\n/Dh/1BKmADuIq6IyWdWicDw0JiS39GC6Uuumybl5ktiLyVRrdy4="
