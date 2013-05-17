@@ -13,7 +13,7 @@ class SeleniumTestBase < Test::Unit::TestCase
     #Some code which will query a DB for you
   end
   def start_browser(browserType)
-    caps = Selenium::WebDriver::Remote::Capabilities.browserType
+    caps = Selenium::WebDriver::Remote::Capabilities.firefox
     username = ENV['SAUCE_USERNAME']
     key = ENV['SAUCE_ACCESS_KEY']
     hub_url = "http://#{username}:#{key}@ondemand.saucelabs.com:80" 
