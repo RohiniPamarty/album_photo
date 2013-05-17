@@ -171,7 +171,7 @@ class LoginTests < ProjectTestBase
   def successful_login_test
     setup
     @loginactions=LoginActions.new(@myDriver) 
-    output = assert_equal @loginactions.login_attempt("Rohini","password", true).get_now.text,"Signed in successfully."
+    output = assert_equal @loginactions.login_attempt("mandar","password", true).get_now.text,"Signed in successfully."
     tear_down(@myDriver)
     return output
     

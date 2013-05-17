@@ -16,7 +16,7 @@
         }
       ],
       "scripts": [
-        "selenium/tests/*"
+        "ruby selenium/tests/*.rb"
       ]
     }
   ]
