@@ -14,7 +14,8 @@ before_script:
   - gem install selenium-webdriver
   - gem install sauce
   - rake db:migrate
-
+  - java -cp selenium-server-standalone-2.25.0.jar:sauce-grid-plugin-1.0.4.jar org.openqa.grid.selenium.GridLauncher -role hub \
+  
 notifications:
   email:
     - rohini@neevtech.com
