@@ -11,10 +11,14 @@ env:
     - secure: "SQ3jhq1SWUZuCmPhEY3gLTB806YyHQq2euDhgcASozgeZNVzR7tPiLl6gJA9\nKus47YpvhpaSWhk0Fp+f9DqeYCTMs865YvXSyP0gsw47ph5lhI5oyV/R5lbi\n/Dh/1BKmADuIq6IyWdWicDw0JiS39GC6Uuumybl5ktiLyVRrdy4="
     - secure: "MqMB2UXc6zpMnr11c8mjuw/IwLOcRpmIq8L/31W4xd+grhIrj6B2zZSep7rt\ng7vbcyzMVajUdw7/An1jeB8juhaGUGL3YnxVAkQWTpfdDkCuOoM4vjh9vgUY\n0mgFq40oTB7ye3sP2acfeDkvs5dXznxQiIt9byWUmq7cSwK3AIo="
 before_script:
-  - "npm install -g se-interpreter"
+  - gem install selenium-webdriver
+  - gem install sauce
   - rake db:migrate
+  - curl https://gist.github.com/santiycr/5139565/raw/sauce_connect_setup.sh | bash
+
 notifications:
   email:
     - rohini@neevtech.com
 platform:
   - Linux
+
