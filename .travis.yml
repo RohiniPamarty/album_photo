@@ -8,8 +8,13 @@ script:
   - "se-interpreter interpreter_config.json"
 env:
   global:
-    - secure: "AlheOk2XydaTcCLfDVzhoSmLdSLK2bRAUq9sQSZZyJU/FT8Tpf/FLgxMSBeU\n0EHUQPIt6rta/oXLr7Rt2HErzXnmSsV8oIVxm0lxexQMn2l3K2PAQXo0oKXR\nES1r5xNUqN2E6zS5teHoN3ibOSCmVyYGEhZr9i/tPeRkjWeTy+4="
-    - secure: "g/2EvlTwuhFhYpDYKuP4YcSo2bIdF4FTrUEdxgpwEIFbQzCvCmPtgamLBdKA\nDLnMWaUJc8879pUMC7xsBc5maSeLd0oe3uNuIMYlyeGbJwyP9P8fBz5CwA/g\nyG4VF2rMhuQXkPuyQpPXa1SdguIGqNH9bOMm/sNJLiHIv2fMy6w="
+    - secure: "SQ3jhq1SWUZuCmPhEY3gLTB806YyHQq2euDhgcASozgeZNVzR7tPiLl6gJA9\nKus47YpvhpaSWhk0Fp+f9DqeYCTMs865YvXSyP0gsw47ph5lhI5oyV/R5lbi\n/Dh/1BKmADuIq6IyWdWicDw0JiS39GC6Uuumybl5ktiLyVRrdy4="
+    - secure: "MqMB2UXc6zpMnr11c8mjuw/IwLOcRpmIq8L/31W4xd+grhIrj6B2zZSep7rt\ng7vbcyzMVajUdw7/An1jeB8juhaGUGL3YnxVAkQWTpfdDkCuOoM4vjh9vgUY\n0mgFq40oTB7ye3sP2acfeDkvs5dXznxQiIt9byWUmq7cSwK3AIo="
 before_script:
   - "npm install -g se-interpreter"
   - rake db:migrate
+notifications:
+  email:
+    - rohini@neevtech.com
+platform:
+  - Linux
