@@ -146,11 +146,11 @@ class LoginActions < ProjectActionBase
     @loginpage.passwordTextField.send_keys(password)
     @loginpage.passwordTextField.submit
     if(isValid != nil && isValid == true) 
-     @myDriver.manage().timeouts().implicitlyWait( 5, TimeUnit.SECONDS ); 
+      @myDriver.manage.timeouts.implicit_wait = 10    
       return @loginpage.confirmationMessage
     end
     if(isValid != nil && isValid == false)
-     @myDriver.manage().timeouts().implicitlyWait( 5, TimeUnit.SECONDS ); 
+      @myDriver.manage.timeouts.implicit_wait = 10    
       return @loginpage.errorMessage
     end
     #@loginpage.submit    
