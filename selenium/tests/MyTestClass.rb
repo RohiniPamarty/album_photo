@@ -194,10 +194,10 @@ end
 
 
 class MyTestClass < Test::Unit::TestCase  
-  def test
-    @instance_sucess = LoginTests.new(Selenium::WebDriver)
-    assert(@instance_sucess.successful_login_test)
-  end
+#  def test
+#    @instance_sucess = LoginTests.new(Selenium::WebDriver)
+#    assert(@instance_sucess.successful_login_test)
+#  end
   def test2
     @instance_failure = LoginTests.new(Selenium::WebDriver)
     assert(@instance_failure.unsuccessful_login_test)
