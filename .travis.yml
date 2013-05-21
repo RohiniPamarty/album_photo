@@ -14,8 +14,7 @@ before_script:
   - gem install selenium-webdriver -v =2.32.0
   - gem install sauce
   - rake db:migrate
-  - wget http://selenium.googlecode.com/files/selenium-server-standalone-2.32.0.jar
-  - java -jar selenium-server-standalone-2.32.0.jar
+
   
 notifications:
   email:
