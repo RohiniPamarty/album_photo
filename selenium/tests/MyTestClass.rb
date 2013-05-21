@@ -147,14 +147,14 @@ class LoginActions < ProjectActionBase
     @loginpage.passwordTextField.submit
     if(isValid != nil && isValid == true) 
       wait = Selenium::WebDriver::Wait.new(:timeout => 10)
-      wait.util {
+      wait.until {
       @myDriver.execute_script("return document.readyState;") == "complete" 
       }     
       return @loginpage.confirmationMessage
     end
     if(isValid != nil && isValid == false)
       wait = Selenium::WebDriver::Wait.new(:timeout => 10)
-      wait.util {
+      wait.until {
       @myDriver.execute_script("return document.readyState;") == "complete" 
       }  
       return @loginpage.errorMessage
