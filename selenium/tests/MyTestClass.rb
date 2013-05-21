@@ -13,12 +13,10 @@ class SeleniumTestBase < Test::Unit::TestCase
     #Some code which will query a DB for you
   end
   def start_browser(browserType)
-proxy = Selenium::WebDriver::Proxy.new(:http => ENV['HTTP_PROXY'] || ENV['http_proxy'])
-ENV['HTTP_PROXY'] = ENV['http_proxy'] = nil
     caps = Selenium::WebDriver::Remote::Capabilities.firefox
     username = ENV['SAUCE_USERNAME']
     key = ENV['SAUCE_ACCESS_KEY']
-    hub_url = "http://#{username}:#{key}@ondemand.saucelabs.com:80" 
+    hub_url = "http://#{username}:#{key}@ondemand.saucelabs.com:80/wd/hub" 
     return @myDriver = @myDriver.for(:remote, :url => hub_url, :desired_capabilities => caps)
     #Some code which will launch different types of browsers
   end
