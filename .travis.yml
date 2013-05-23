@@ -15,7 +15,7 @@ before_script:
   - sudo apt-get install sendmail sendmail-base sendmail-bin sendmail-cf mailutils
   - gem install pony
 after_script:
-  - Pony.mail(:to => 'rohini@neevtech.com', :from => 'notifications@travis-ci.org', :subject => "hi!", :body => "hello")
+  - "ruby selenium/mail.rb"
 notifications:
   recipients:
       - rohini@neevtech.com
