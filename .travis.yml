@@ -12,7 +12,7 @@ env:
     - secure: "MqMB2UXc6zpMnr11c8mjuw/IwLOcRpmIq8L/31W4xd+grhIrj6B2zZSep7rt\ng7vbcyzMVajUdw7/An1jeB8juhaGUGL3YnxVAkQWTpfdDkCuOoM4vjh9vgUY\n0mgFq40oTB7ye3sP2acfeDkvs5dXznxQiIt9byWUmq7cSwK3AIo="
 before_script:
   - rake db:migrate
-  - apt-get install sendmail sendmail-base sendmail-bin sendmail-cf mailutils
+  - sudo apt-get install sendmail sendmail-base sendmail-bin sendmail-cf mailutils
   - gem install pony
 after_script:
   - Pony.mail(:to => 'rohini@neevtech.com', :from => 'notifications@travis-ci.org', :subject => "hi!", :body => "hello")
