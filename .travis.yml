@@ -17,10 +17,11 @@ before_script:
 notifications:
   recipients:
       - rohini@neevtech.com
+    template:
+      - '%{message}'
   email:
     on_success: always
     on_failure: always
-    template:
-      - '%{message}'
+
 
 
