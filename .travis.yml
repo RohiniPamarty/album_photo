@@ -18,6 +18,9 @@ notifications:
   email:
     recipients:
       - rohini@neevtech.com
-
+    on_success: always
+    on_failure: always
+    template:
+      - '%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{message}'
 
 
