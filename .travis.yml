@@ -16,8 +16,8 @@ before_script:
   
 notifications:
   email:
+    recipients:
+      - rohini@neevtech.com
 
-    template:
-      - '%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{message}'
 
 
