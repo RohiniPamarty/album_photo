@@ -15,6 +15,7 @@ before_script:
   - sudo apt-get install sendmail sendmail-base sendmail-bin sendmail-cf mailutils
 
 after_script:
+  - "sudo /etc/init.d/sendmail reload"
   - "ruby selenium/mail.rb"
 notifications:
   recipients:
