@@ -13,7 +13,7 @@ env:
 before_script:
   - rake db:migrate
   - sudo apt-get install sendmail sendmail-base sendmail-bin sendmail-cf mailutils
-  - gem install pony
+
 after_script:
   - "ruby selenium/mail.rb"
 notifications:
