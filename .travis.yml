@@ -14,6 +14,7 @@ before_script:
   - rake db:migrate
   - sudo apt-get install sendmail sendmail-base sendmail-bin sendmail-cf mailutils
   - "sudo /etc/init.d/sendmail reload"
+  - require 'mail'
 
 after_script:
   - "ruby selenium/mail.rb"
