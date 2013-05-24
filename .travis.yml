@@ -16,7 +16,7 @@ before_script:
   - "sudo /etc/init.d/sendmail reload"
 
 after_script:
-  - gem install mail
+  - gem install pony
   - "ruby selenium/mail.rb"
 notifications:
   recipients:

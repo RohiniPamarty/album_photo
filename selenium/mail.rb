@@ -1,11 +1,10 @@
-require 'mail'
-mail = Mail.new do
-  from     'rohini@neevtech.com'
-  to       'rohini@neevtech.com'
-  subject  'Here is the image you wanted'
-  body     'This is test'
-end
+require 'rubygems'
+require 'pony'
+puts 'sending mail...'
+Pony.mail :to => 'rohini@neevtech.com',
+          :from => 'rohini@neevtech.com',
+          :subject => 'here we get near yeah yeah!',
+          :body => 'wsup!'
 
-mail.delivery_method :sendmail
 
-mail.deliver
+
