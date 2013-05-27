@@ -18,9 +18,9 @@ before_script:
 after_script:
 
 after_success:
-  - ruby selenium/mail.rb TRAVIS_TEST_RESULT
+  - ruby selenium/mail.rb '%{TRAVIS_TEST_RESULT}'
 after_failure:
-  - ruby selenium/mail.rb TRAVIS_TEST_RESULT
+  - ruby selenium/mail.rb '%{TRAVIS_TEST_RESULT}'
 notifications:
   recipients:
       - rohini@neevtech.com
