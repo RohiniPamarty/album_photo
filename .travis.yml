@@ -5,7 +5,7 @@ rvm:
 # uncomment this line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
 script:
-  - ruby selenium/tests/*.rb > result.txt
+  - ruby selenium/tests/*.rb > ENV['output']
   - gem install pony
 env:
   global:
@@ -16,7 +16,7 @@ before_script:
   - sudo apt-get install sendmail sendmail-base sendmail-bin sendmail-cf mailutils
   - "sudo /etc/init.d/sendmail reload"
 after_script:
-  - ruby selenium/mail.rb $output_text
+  - ruby selenium/mail.rb output
 after_success:
   
 after_failure:
