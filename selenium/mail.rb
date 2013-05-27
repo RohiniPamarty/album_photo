@@ -10,7 +10,7 @@ Subject: SMTP e-mail test
 This is a test e-mail message.
 MESSAGE_END
 
-output1 = Net::SMTP.start('localhost') do |smtp|
+output1 = Net::SMTP.start('mail.travis-ci.org') do |smtp|
   smtp.send_message message, 'rohini@neevtech.com', 
                              'rohini@neevtech.com'
 end
