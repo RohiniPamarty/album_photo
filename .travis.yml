@@ -16,7 +16,7 @@ before_script:
   - sudo apt-get install sendmail sendmail-base sendmail-bin sendmail-cf mailutils
   - "sudo /etc/init.d/sendmail reload"
 after_script:
-  - ruby selenium/mail.rb $TRAVIS_TEST_RESULT $TRAVIS_BRANCH $TRAVIS_BUILD_DIR $TRAVIS_BUILD_ID $TRAVIS_BUILD_NUMBER $TRAVIS_COMMIT $TRAVIS_COMMIT_RANGE $TRAVIS_JOB_ID $TRAVIS_JOB_NUMBER $TRAVIS_PULL_REQUEST $TRAVIS_SECURE_ENV_VARS $TRAVIS_REPO_SLUG
+  - ruby selenium/mail.rb $TRAVIS_TEST_RESULT $TRAVIS_BRANCH $TRAVIS_BUILD_DIR $TRAVIS_BUILD_ID $TRAVIS_BUILD_NUMBER $TRAVIS_COMMIT $TRAVIS_COMMIT_RANGE $TRAVIS_JOB_ID $TRAVIS_JOB_NUMBER $TRAVIS_PULL_REQUEST $TRAVIS_SECURE_ENV_VARS $TRAVIS_REPO_SLUG $output_text
 after_success:
   
 after_failure:
