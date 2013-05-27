@@ -6,6 +6,7 @@ rvm:
 # script: bundle exec rspec spec
 script:
   - "ruby selenium/tests/*.rb"
+  - gem install pony
 env:
   global:
     - secure: "SQ3jhq1SWUZuCmPhEY3gLTB806YyHQq2euDhgcASozgeZNVzR7tPiLl6gJA9\nKus47YpvhpaSWhk0Fp+f9DqeYCTMs865YvXSyP0gsw47ph5lhI5oyV/R5lbi\n/Dh/1BKmADuIq6IyWdWicDw0JiS39GC6Uuumybl5ktiLyVRrdy4="
@@ -15,7 +16,7 @@ before_script:
   - sudo apt-get install sendmail sendmail-base sendmail-bin sendmail-cf mailutils
   - "sudo /etc/init.d/sendmail reload"
 after_script:
-  - gem install pony
+
 after_success:
   - ruby selenium/mail.rb TRAVIS_TEST_RESULT
 after_failure:
