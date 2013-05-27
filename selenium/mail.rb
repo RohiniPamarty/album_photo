@@ -1,17 +1,20 @@
+out = require 'pony'
+puts "#{out}"
+#ouput = Pony.mail(:to => 'rohini@neevtech.com', :from => 'rohini@neevtech.com', :subject => "hi!", :body => "hello",:via => :sendmail)
 
 
-require 'net/smtp'
 
-message = <<MESSAGE_END
-From: Private Person <rohini@neevtech.com>
-To: A Test User <rohini@neevtech.com>
-Subject: SMTP e-mail test
-
-This is a test e-mail message.
-MESSAGE_END
-
-output1 = Net::SMTP.start('mail.travis-ci.org') do |smtp|
-  smtp.send_message message, 'rohini@neevtech.com', 
-                             'rohini@neevtech.com'
-end
-puts "#{output1}"
+ouput = Pony.mail({
+  :to => 'rohini@neevtech.com',
+  :via => :smtp,
+  :via_options => {
+    :address              => 'smtp.gmail.com',
+    :port                 => '587',
+    :enable_starttls_auto => true,
+    :user_name            => 'rohini@neevtech.com',
+    :password             => 'ponytest',
+    :authentication       => :plain, # :plain, :login, :cram_md5, no auth by default
+    :domain               => ENV["HOSTNAME"] # the HELO domain provided by the client to the server
+  }
+})
+puts "#{ouput}"
