@@ -5,6 +5,8 @@ rvm:
 # uncomment this line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
 script:
+  - gem install pony
+  - "ruby selenium/mail.rb"
   - "ruby selenium/tests/*.rb"
 env:
   global:
@@ -16,10 +18,7 @@ before_script:
   - "sudo /etc/init.d/sendmail reload"
 
 after_script:
-  - gem install pony
-  - irb
-  - require 'pony'
-  - Pony.mail(:to => 'rohini@neevtech.com', :from => 'rohini@neevtech.com', :subject => "hi!", :body => "hello",:via => :sendmail)
+
 notifications:
   recipients:
       - rohini@neevtech.com
