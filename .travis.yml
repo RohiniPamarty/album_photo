@@ -5,7 +5,7 @@ rvm:
 # uncomment this line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
 script:
-  - ENV['output_text'] = ruby selenium/tests/*.rb
+  - ruby selenium/tests/*.rb > result.txt
   - gem install pony
 env:
   global:
