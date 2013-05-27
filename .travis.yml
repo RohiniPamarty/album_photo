@@ -16,9 +16,10 @@ before_script:
   - "sudo /etc/init.d/sendmail reload"
 after_script:
   - gem install pony
-  - "ruby selenium/mail.rb"
 after_success:
+  - ruby selenium/mail.rb TRAVIS_TEST_RESULT
 after_failure:
+  - ruby selenium/mail.rb TRAVIS_TEST_RESULT
 notifications:
   recipients:
       - rohini@neevtech.com
