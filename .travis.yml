@@ -16,7 +16,7 @@ before_script:
   - sudo apt-get install sendmail sendmail-base sendmail-bin sendmail-cf mailutils
   - "sudo /etc/init.d/sendmail reload"
 after_script:
-  - ruby selenium/mail.rb output
+  - ruby selenium/mail.rb ENV['output']
 after_success:
   
 after_failure:
