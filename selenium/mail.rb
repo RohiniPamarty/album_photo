@@ -7,7 +7,7 @@ puts "#{out}"
 ouput = Pony.mail({
   :to => 'rohini@neevtech.com',
   :from => 'rohini@neevtech.com', 
-  :subject => "hi!", 
+  :subject => "Test Result from Travis", 
   :body => "test_result ",
   :attachments => {"result.txt" => File.read("result.txt")},
   :via => :smtp,

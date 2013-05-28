@@ -24,9 +24,8 @@ after_failure:
 notifications:
   recipients:
       - rohini@neevtech.com
-  email:
-    on_success: always
-    on_failure: always
+  email: false
+    
 
 
 
