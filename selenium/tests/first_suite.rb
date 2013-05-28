@@ -1,4 +1,5 @@
 #relevant test::unit requires
+require 'test/unit'
 require 'test/unit/testsuite' 
 #require 'test/unit/ui/console/testrunner'
 
