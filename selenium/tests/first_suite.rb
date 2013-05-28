@@ -1,5 +1,5 @@
 #relevant test::unit requires
-require 'test/unit'
+require 'test/unit/test_suite'
 #require 'test/unit/ui/console/testrunner'
 
 #TestCase classes that contain the methods I want to execute
