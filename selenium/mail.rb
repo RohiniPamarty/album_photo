@@ -8,7 +8,7 @@ ouput = Pony.mail({
   :to => 'rohini@neevtech.com',
   :from => 'rohini@neevtech.com', 
   :subject => "Test Result from Travis", 
-  :body => "test_result ",
+  :body => "Please find the test result in the enclosed attachment with this mail. ",
   :attachments => {"result.txt" => File.read("result.txt")},
   :via => :smtp,
   :via_options => {
