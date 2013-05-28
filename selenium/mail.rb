@@ -10,15 +10,10 @@ ouput = Pony.mail({
   :subject => "Test Result from Travis", 
   :body => "Please find the test result in the enclosed attachment with this mail. ",
   :attachments => {"result.txt" => File.read("result.txt")},
-  :via => :smtp,
+  :via => :sendmail,
   :via_options => {
-    :address              => 'smtp.gmail.com',
-    :port                 => '587',
-    :enable_starttls_auto => true,
-    :user_name            => 'rohini@neevtech.com',
-    :password             => 'ponytest',
-    :authentication       => :plain, # :plain, :login, :cram_md5, no auth by default
-    :domain               => ENV["HOSTNAME"] # the HELO domain provided by the client to the server
+    :location  => '/usr/sbin/sendmail', # defaults to 'which sendmail' or '/usr/sbin/sendmail' if 'which' fails
+    :arguments => '-t' # -t and -i are the defaults
   }
 })
 puts "#{ouput}"
