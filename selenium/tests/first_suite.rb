@@ -3,7 +3,7 @@ require 'test/unit'
 #require 'test/unit/ui/console/testrunner'
 
 #TestCase classes that contain the methods I want to execute
-require './MyTestClass'
+require_relative 'MyTestClass'
 
 #create a new empty TestSuite, giving it a name
 my_tests = Test::Unit::TestSuite.new("My Special Tests")
