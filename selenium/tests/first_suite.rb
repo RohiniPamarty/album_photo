@@ -1,6 +1,6 @@
 #relevant test::unit requires
 require 'test/unit'
-require 'test/unit/ui/console/testrunner'
+#require 'test/unit/ui/console/testrunner'
 
 #TestCase classes that contain the methods I want to execute
 require 'MyTestClass'
@@ -14,4 +14,4 @@ my_tests = Test::Unit::TestSuite.new("My Special Tests")
 my_tests << MyTestClass.new('test2')
 
 #run the suite
-Test::Unit::UI::Console::TestRunner.run(my_tests)
+#Test::Unit::UI::Console::TestRunner.run(my_tests)
