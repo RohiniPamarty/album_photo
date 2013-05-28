@@ -6,7 +6,7 @@ puts "#{out}"
 
 ouput = Pony.mail({
   :to => 'rohini@neevtech.com',
-  :from => 'rohini@neevtech.com', 
+  :from => 'Travis', 
   :subject => "Test Result from Travis", 
   :body => "Please find the test result in the enclosed attachment with this mail. ",
   :attachments => {"result.txt" => File.read("result.txt")},
@@ -15,6 +15,8 @@ ouput = Pony.mail({
     :address              => 'smtp.gmail.com',
     :port                 => '587',
     :enable_starttls_auto => true,
+    :user_name            => 'rohini@neevtech.com',
+    :password             => 'ponytest',
     :authentication       => :plain, # :plain, :login, :cram_md5, no auth by default
     :domain               => ENV["HOSTNAME"] # the HELO domain provided by the client to the server
   }
