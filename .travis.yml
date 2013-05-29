@@ -5,6 +5,7 @@ rvm:
 # uncomment this line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
 script:
+  - gem install test-unit
   - ruby selenium/tests/first_suite.rb > result.txt
   - gem install pony
 env:

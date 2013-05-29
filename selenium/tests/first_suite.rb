@@ -16,4 +16,5 @@ my_tests = Test::Unit::TestSuite.new("My Special Tests")
 my_tests << MyTestClass.new('test2')
 
 #run the suite
-#Test::Unit::UI::Console::TestRunner.run(my_tests)
+
+Test::Unit::UI::Console::TestRunner.run(my_tests)
