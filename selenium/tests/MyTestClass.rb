@@ -109,6 +109,6 @@ class MyTestClass < Test::Unit::TestCase
 #  end
   def test2
     @instance_failure = LoginTests.new(Selenium::WebDriver)
-    assert(@instance_failure.unsuccessful_login_test)
+    assert(@instance_failure.unsuccessful_login_test, "This is expected to be true")
   end
 end
