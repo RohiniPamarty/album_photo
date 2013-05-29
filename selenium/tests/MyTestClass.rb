@@ -94,7 +94,7 @@ class LoginTests < ProjectTestBase
   def unsuccessful_login_test
     setup
     @loginactions=LoginActions.new(@myDriver) 
-    output = assert_equal @loginactions.login_attempt("abc","abc", false).get_now.text,"Invalid email or password."
+    output = @loginactions.login_attempt("abc","abc", false).get_now.text
     tear_down(@myDriver)
     return output
     
@@ -109,6 +109,6 @@ class MyTestClass < Test::Unit::TestCase
 #  end
   def test2
     @instance_failure = LoginTests.new(Selenium::WebDriver)
-    assert(@instance_failure.unsuccessful_login_test, "This is expected to be true")
+    assert_equal(@instance_failure.unsuccessful_login_test, "Invalid email or password.")
   end
 end
