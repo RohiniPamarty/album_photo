@@ -2,7 +2,7 @@
 gem 'test-unit'
 require 'test/unit'
 require 'test/unit/testsuite' 
-#require 'test/unit/ui/console/testrunner'
+require 'test/unit/ui/console/testrunner'
 
 #TestCase classes that contain the methods I want to execute
 require_relative 'MyTestClass'
