@@ -1,6 +1,7 @@
 require 'rubygems'
 require "selenium-webdriver"
 require 'sqlite3'
+gem 'test-unit'
 require 'test/unit'
 require_relative 'selenium_base'
 include Test::Unit::Assertions

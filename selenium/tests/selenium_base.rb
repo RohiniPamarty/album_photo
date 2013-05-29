@@ -1,3 +1,4 @@
+gem 'test-unit'
 class SeleniumTestBase < Test::Unit::TestCase
   def initialize(webDriver)
     @myDriver = webDriver
