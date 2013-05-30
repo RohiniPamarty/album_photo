@@ -5,7 +5,8 @@ require 'test/unit/testsuite'
 require 'test/unit/ui/console/testrunner'
 
 #TestCase classes that contain the methods I want to execute
-require_relative 'tests/MyTestClass'
+require File.expand_path('../../tests/MyTestClass', __FILE__)
+#require 'selenium/tests/MyTestClass'
 
 #create a new empty TestSuite, giving it a name
 my_tests = Test::Unit::TestSuite.new("My Special Tests")

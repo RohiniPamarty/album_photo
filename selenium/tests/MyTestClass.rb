@@ -3,7 +3,8 @@ require "selenium-webdriver"
 require 'sqlite3'
 gem 'test-unit'
 require 'test/unit'
-require_relative '/framework/selenium_base'
+require File.expand_path('../../framework/selenium_base', __FILE__)
+#require_relative '/framework/selenium_base'
 include Test::Unit::Assertions
 
 
