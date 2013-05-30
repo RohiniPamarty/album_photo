@@ -6,7 +6,7 @@ rvm:
 # script: bundle exec rspec spec
 script:
   - gem install test-unit
-  - ruby selenium/tests/first_suite.rb > result.txt
+  - ruby selenium/suites/first_suite.rb > result.txt
   - gem install pony
 env:
   global:
