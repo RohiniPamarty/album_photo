@@ -9,7 +9,7 @@ class SeleniumTestBase < Test::Unit::TestCase
     #Some code which will query a DB for you
   end
   def start_browser(browserType)
-    caps = Selenium::WebDriver::Remote::Capabilities."#{browserType}"
+    caps = Selenium::WebDriver::Remote::Capabilities.browserType
     caps.platform = 'Linux'
     caps.version = '17'
     username = ENV['SAUCE_USERNAME']
