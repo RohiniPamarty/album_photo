@@ -10,15 +10,15 @@ class SeleniumTestBase < Test::Unit::TestCase
   end
   def start_browser(browserType)
     case browserType
-      when firefox
+      when "firefox"
         caps = Selenium::WebDriver::Remote::Capabilities.firefox
-      when crome
+      when "chrome"
         caps = Selenium::WebDriver::Remote::Capabilities.chrome
-      when opera
+      when "opera"
         caps = Selenium::WebDriver::Remote::Capabilities.opera
-      when internetexplorer
+      when "internetexplorer"
         caps = Selenium::WebDriver::Remote::Capabilities.internetexplorer
-      when safari
+      when "safari"
         caps = Selenium::WebDriver::Remote::Capabilities.safari
       else
         caps = Selenium::WebDriver::Remote::Capabilities.firefox
